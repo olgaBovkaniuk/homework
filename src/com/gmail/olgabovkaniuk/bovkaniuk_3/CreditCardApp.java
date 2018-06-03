@@ -1,4 +1,4 @@
-package bovkaniuk_3.com.gmail.olgabovkaniuk;
+package com.gmail.olgabovkaniuk.bovkaniuk_3;
 
 public class CreditCardApp {
     public static void main(String[] args) {
