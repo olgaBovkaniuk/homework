@@ -15,12 +15,15 @@ public class Main {
 
         NumberOperationService numberCounterService = new NumberOperationService();
 
-        numberCounterService.someCalculation();
+//        numberCounterService.someCalculation();
+//
+//        numberCounterService.countNumber();
+//
+//        numberCounterService.evenNumbersInArray();
+//
+//        numberCounterService.generateNumberBetweenTwo();
 
-        numberCounterService.countNumber();
-
-        numberCounterService.evenNumbersInArray();
-
-        numberCounterService.generateNumberBetweenTwo();
+        CountNumberInDigitService countNumberInDigitService = new CountNumberInDigitService();
+        countNumberInDigitService.countNumberInDigit();
     }
 }
