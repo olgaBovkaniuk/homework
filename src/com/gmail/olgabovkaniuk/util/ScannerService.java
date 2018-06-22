@@ -1,4 +1,4 @@
-package com.gmail.olgabovkaniuk.bovkaniuk_10;
+package com.gmail.olgabovkaniuk.util;
 
 import java.util.Scanner;
 

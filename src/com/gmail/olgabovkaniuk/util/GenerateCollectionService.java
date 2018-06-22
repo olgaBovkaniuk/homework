@@ -1,6 +1,8 @@
-package com.gmail.olgabovkaniuk.bovkaniuk_10;
+package com.gmail.olgabovkaniuk.util;
 
 import com.gmail.olgabovkaniuk.bovkaniuk_10.task3.Person;
+import com.gmail.olgabovkaniuk.util.RandomService;
+import com.gmail.olgabovkaniuk.util.ScannerService;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -16,13 +18,10 @@ public class GenerateCollectionService {
         System.out.println("Please, enter list length: ");
         int listLength = scannerService.getNumber();
         List<Integer> list = new ArrayList<>(listLength);
-
         for (int i = 0; i < listLength; i++) {
             list.add(randomService.getRandomNumber(start, end));
         }
-
         System.out.println(list);
-
         return list;
     }
 
@@ -30,14 +29,11 @@ public class GenerateCollectionService {
         System.out.println("Please, enter list length: ");
         int listLength = scannerService.getNumber();
         List<String> list = new ArrayList<>(listLength);
-
         for (int i = 0; i < listLength; i++) {
             System.out.println("Please, enter any string: ");
             list.add(scannerService.getString());
         }
-
         System.out.println(list);
-
         return list;
     }
 
@@ -45,14 +41,12 @@ public class GenerateCollectionService {
         System.out.println("Please, enter list length: ");
         int listLength = scannerService.getNumber();
         List<Person> list = new ArrayList<>(listLength);
-
         for (int i = 0; i < listLength; i++) {
             System.out.println("Please, enter person name and surname: ");
             list.add(new Person(scannerService.getString(),
-                                scannerService.getString(),
-                                randomService.getRandomNumber(AGE_FROM, AGE_TO)));
+                    scannerService.getString(),
+                    randomService.getRandomNumber(AGE_FROM, AGE_TO)));
         }
-
         return list;
     }
 }
