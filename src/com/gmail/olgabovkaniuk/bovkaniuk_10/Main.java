@@ -18,19 +18,18 @@ package com.gmail.olgabovkaniuk.bovkaniuk_10;
 import com.gmail.olgabovkaniuk.bovkaniuk_10.task1.FindMaxElemInListService;
 import com.gmail.olgabovkaniuk.bovkaniuk_10.task2.ChangeSymbolInListStringService;
 import com.gmail.olgabovkaniuk.bovkaniuk_10.task3.PrintPersonDataService;
+import com.gmail.olgabovkaniuk.util.GenerateCollectionService;
+
+import java.util.Arrays;
 
 public class Main {
     private GenerateCollectionService generateCollection = new GenerateCollectionService();
 
     public static void main(String[] args) {
         Main app = new Main();
-
         app.test1();
-
         app.test2();
-
         app.test3();
-
     }
 
     private void test1() {

@@ -25,9 +25,10 @@ public class Person {
 
     @Override
     public String toString() {
-        if (age >= 18) {
-            return String.format("Adult: name %s, surname %s, age %d %n", name, surname, age);
-        }
-        return String.format("Infant: name %s, surname %s, age %d %n", name, surname, age);
+        return "Person{" +
+                "name='" + name + '\'' +
+                ", surname='" + surname + '\'' +
+                ", age=" + age +
+                '}';
     }
 }
