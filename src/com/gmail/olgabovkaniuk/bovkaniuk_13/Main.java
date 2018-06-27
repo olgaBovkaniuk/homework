@@ -21,14 +21,28 @@ public class Main {
     private static ScannerService scannerService = new ScannerService();
 
     public static void main(String[] args) {
+        Main app = new Main();
+
+        app.test1();
+
+        app.test2();
+
+        app.test3();
+    }
+
+    private void test1(){
         IntParserService parserService = new IntParserService();
         parserService.readFromFile();
+    }
 
+    private void test2(){
         WriteToFileService writeToFile = new WriteToFileService();
+        System.out.println("Please, enter a number of digits: ");
         writeToFile.writeToFile(scannerService.getNumber());
+    }
 
+    private void test3(){
         FileService fileService = new FileService();
         fileService.readFile();
-
     }
 }

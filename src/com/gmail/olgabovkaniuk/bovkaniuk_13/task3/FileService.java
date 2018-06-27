@@ -37,24 +37,13 @@ public class FileService {
     }
 
     private void writeToFile(List<String> stringList) {
-        File file = new File("E://homework/files.txt");
-        FileWriter fw = null;
-        try {
-            fw = new FileWriter(file);
+        try (FileWriter fw = new FileWriter(new File("E://homework/files.txt"))) {
             for (String string : stringList) {
                 fw.write(string);
                 fw.write(", ");
             }
         } catch (IOException e) {
             e.printStackTrace();
-        } finally {
-            try {
-                if (fw != null) {
-                    fw.close();
-                }
-            } catch (IOException e) {
-                e.printStackTrace();
-            }
         }
     }
 }
