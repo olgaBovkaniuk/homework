@@ -35,5 +35,6 @@ public class TaskRunExecutor {
         } catch (ExecutionException e) {
             e.printStackTrace();
         }
+        executorService.shutdown();
     }
 }

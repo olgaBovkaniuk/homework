@@ -51,6 +51,7 @@ public class FileReadCallable implements Callable<List<Future<Integer>>> {
         Callable<Integer> integerCallable = new SumOfIntCallable(stringList);
         Future<Integer> future = executorService.submit(integerCallable);
         futureList.add(future);
+        executorService.shutdown();
     }
 
     @Override

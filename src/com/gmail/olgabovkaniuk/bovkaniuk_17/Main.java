@@ -65,6 +65,7 @@ public class Main {
         }
         double average = (double) sum / count;
         System.out.println("Average of max elements from all threads is: " + average);
+        executor.shutdown();
         System.out.println("-------------------------------------------------");
     }
 
