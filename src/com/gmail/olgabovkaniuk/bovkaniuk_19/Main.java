@@ -25,7 +25,7 @@ public class Main {
     public static void main(String[] args) {
         Main app = new Main();
 
-//        app.test1();
+        app.test1();
 
         app.test2();
     }
