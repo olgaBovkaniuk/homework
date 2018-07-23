@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           targetNamespace="src/com/gmail/olgabovkaniuk/controlWork2/purchaseOrder.xsd"
+           xmlns="src/com/gmail/olgabovkaniuk/controlWork2/purchaseOrder.xsd"
+           elementFormDefault="qualified">
+    <xs:element name="PurchaseOrder" type="PurchaseOrderType"/>
+    <xs:complexType name="PurchaseOrderType">
+        <xs:sequence>
+            <xs:element name="Item" minOccurs="0" maxOccurs="unbounded">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element name="ProductName" type="xs:string"/>
+                        <xs:element name="Quantity" type="xs:positiveInteger"/>
+                        <xs:element name="USPrice" type="xs:decimal"/>
+                        <xs:element name="Comment" type="xs:string" minOccurs="0"/>
+                        <xs:element name="ShipDate" type="xs:string" minOccurs="0"/>
+                    </xs:sequence>
+                    <xs:attribute name="PartNumber" type="xs:string" use="required"/>
+                </xs:complexType>
+            </xs:element>
+        </xs:sequence>
+        <xs:attribute name="OrderDate" type="xs:date"/>
+    </xs:complexType>
+</xs:schema>
